@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz World - Sélection du Quiz</title>
+    <!-- Lien vers Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Lien vers les polices Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body class="bg-info">
+
+    <header class="text-white text-center py-4">
+        <h1>Quizz World</h1>
+    </header>
+
+    <main class="container mt-5">
+        <!-- Sélection des catégories et niveaux -->
+        <div class="category-selection">
+            <h2 class="text-center mb-4"></h2>
+            
+            <!-- Catégorie : Applications Web -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>Applications Web</h2>
+                <img src="img/web.jpg" alt="Applications Web" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="applicationsWeb" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="applicationsWeb" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="applicationsWeb" value="Expert"> Expert</label>
+                </div>
+            </div>
+
+            <!-- Catégorie : JavaScript -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>JavaScript</h2>
+                <img src="img/javascript.png" alt="JavaScript" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="javascript" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="javascript" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="javascript" value="Expert"> Expert</label>
+                </div>
+            </div>
+
+            <!-- Catégorie : Le XXème Siècle -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>Le XXème Siècle</h2>
+                <img src="img/dates20.jpg" alt="XXème Siècle" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="xxiemeSiecle" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="xxiemeSiecle" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="xxiemeSiecle" value="Expert"> Expert</label>
+                </div>
+            </div>
+
+            <!-- Catégorie : Nintendo -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>Nintendo</h2>
+                <img src="img/nintendo.jpg" alt="Nintendo" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="nintendo" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="nintendo" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="nintendo" value="Expert"> Expert</label>
+                </div>
+            </div>
+
+            <!-- Catégorie : Trouver le Nombre -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>Trouver le Nombre</h2>
+                <img src="img/nombres.jpg" alt="Trouver le Nombre" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="trouverLeNombre" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="trouverLeNombre" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="trouverLeNombre" value="Expert"> Expert</label>
+                </div>
+            </div>
+
+            <!-- Catégorie : Microsoft -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>Microsoft</h2>
+                <img src="img/microsoft.jpg" alt="Microsoft" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="microsoft" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="microsoft" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="microsoft" value="Expert"> Expert</label>
+                </div>
+            </div>
+
+            <!-- Catégorie : PHP -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>PHP</h2>
+                <img src="img/PHP.jpg" alt="PHP" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="php" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="php" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="php" value="Expert"> Expert</label>
+                </div>
+            </div>
+
+            <!-- Catégorie : Méandres d'Internet -->
+            <div class="category text-center p-4 border rounded mb-4">
+                <h2>Méandres d'Internet</h2>
+                <img src="img/internet.jpg" alt="Méandres d'Internet" class="img-fluid mb-3">
+                <div>
+                    <label><input type="radio" name="meandresInternet" value="Débutant"> Débutant</label>
+                    <label><input type="radio" name="meandresInternet" value="Confirmé"> Confirmé</label>
+                    <label><input type="radio" name="meandresInternet" value="Expert"> Expert</label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal pour entrer le prénom -->
+    <div class="modal fade" id="usernameModal" tabindex="-1" aria-labelledby="usernameModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="usernameModalLabel">Entrez votre prénom</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <input type="text" id="username" class="form-control" placeholder="Votre prénom">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                    <button type="button" id="submitName" class="btn btn-primary">Valider</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Lien vers jQuery et Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

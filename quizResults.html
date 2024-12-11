@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Résultats - Quizz World</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Lien vers les polices Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Open+Sans:wght@400;600&family=Bebas+Neue&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Quizz World</h1>
+    </header>
+
+    <main>
+        <div class="result-container">
+            <h2 id="resultTitle">Quiz Terminé !!</h2>
+            <p id="scoreMessage">, vous avez obtenu le score de <span id="score"></span>/10</p>
+            <button onclick="window.location.href='index.html'" class="btn btn-warning">Accueil</button>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+    <script>
+        // Charger le prénom et le score depuis localStorage
+        var username = localStorage.getItem('username');
+        var score = localStorage.getItem('score');
+
+        // Afficher le prénom du joueur et le score
+        document.getElementById('score').innerText = score;
+        document.getElementById('scoreMessage').innerHTML = `${username}, vous avez obtenu le score de ${score}/10`;
+    </script>
+</body>
+</html>
